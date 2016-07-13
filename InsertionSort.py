@@ -13,7 +13,7 @@ def insertionSort(a):
 				swapped = False
 				
 				
-				
+		
 def insertionSort(a):
 	n = len(a)
 	for i in range(1,n):
