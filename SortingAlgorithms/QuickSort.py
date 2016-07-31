@@ -35,5 +35,5 @@ def quickSortHelper(a, first, last):
     if first < last:
         splitPoint = partition(a, first , last)
             
-            quickSortHelper(a, first, splitPoint-1)
-                quickSortHelper(a, splitPoint+1, last)
+        quickSortHelper(a, first, splitPoint-1)
+        quickSortHelper(a, splitPoint+1, last)
