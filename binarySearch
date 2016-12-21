@@ -1,3 +1,5 @@
+BinarySearch with Recursive   O(log(n))
+
 def binarySearch(a, x):
 	n = len(a)
 	if n == 0: 
@@ -10,3 +12,23 @@ def binarySearch(a, x):
 			return binarySearch(a[mid+1:], x)
 		else:
 			return binarySearch(a[:mid], x) # mid is not get include in the slice
+			
+			
+			
+BinarySearch with Loop   O( log(n))
+
+def binarySearch(a, x):
+	lo = 0
+	hi = len(a) - 1
+	found = False
+	while lo < hi and not found:
+		mid = (lo + hi) // 2 # python 3 required // for floor division
+		if a[mid] == x:
+			found = True
+		elif a[mid] > x:
+			hi = mid - 1
+		else:
+			lo = mid + 1
+			
+	return found
+
