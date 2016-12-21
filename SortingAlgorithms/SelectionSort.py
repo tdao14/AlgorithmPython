@@ -1,6 +1,6 @@
 def selectionSort(a):
     i = 0
-        n = len(a)
+    n = len(a)
         while i < n-1:
             s = i
                 for j in range(i+1, n):
