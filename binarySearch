@@ -1,0 +1,12 @@
+def binarySearch(a, x):
+	n = len(a)
+	if n == 0: 
+		return False
+	else:
+		mid = (n-1) // 2 # python 3 required // for floor division	
+		if x == a[mid]:
+			return True
+		elif x > a[mid]:
+			return binarySearch(a[mid+1:], x)
+		else:
+			return binarySearch(a[:mid], x) # mid is not get include in the slice
