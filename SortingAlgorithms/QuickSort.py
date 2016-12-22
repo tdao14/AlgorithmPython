@@ -10,15 +10,15 @@ def partition(a, first, last):
         while left <= right and a[left] <= pivotValue :
             left += 1
                 
-            while left <= right and a[right] >= pivotValue:
-                right -= 1
+        while left <= right and a[right] >= pivotValue:
+            right -= 1
                 
-            if left <= right:
-                temp = a[left]
-                a[left] = a[right]
-                a[right] = temp
-            else:
-                done = True
+        if left <= right:
+            temp = a[left]
+            a[left] = a[right]
+            a[right] = temp
+        else:
+            done = True
 
 
     temp = a[first]
